@@ -1,0 +1,19 @@
+package org.khit.myapp.unittest;
+
+import org.junit.Test;
+import org.khit.myapp.sample.Company;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import lombok.extern.log4j.Log4j;
+
+@Log4j
+public class BeanTest {
+	
+	@Autowired //new 하여 사용한 것과 동일
+	private Company company;	
+	
+	@Test
+	public void beanTest() {
+		
+	}
+}

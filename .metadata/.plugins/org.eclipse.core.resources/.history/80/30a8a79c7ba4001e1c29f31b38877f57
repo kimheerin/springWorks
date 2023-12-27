@@ -1,0 +1,16 @@
+package org.khit.myapp.unittest;
+
+import org.junit.Test;
+
+public class JdbcTest {
+	
+	@Test
+	public void testConnection() {
+		String className="com.mysql.cj.jdbc.Driver";
+        String url="jdbc:mysql://localhost:3306/jwebdb?serverTime=Asia/Seoul";
+        String username="jweb";
+        String password="pwjweb";
+        
+        Class.forName(className)
+	}
+}

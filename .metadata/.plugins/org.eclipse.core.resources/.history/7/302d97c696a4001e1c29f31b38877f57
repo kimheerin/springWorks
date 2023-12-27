@@ -1,0 +1,30 @@
+package org.khit.myapp.controller;
+
+import org.khit.myapp.dto.BoardDTO;
+import org.khit.myapp.repository.BoardDAO;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+@RequestMapping("/board")
+@Controller	//bean 객체로 등록
+public class BoardController {
+	
+	//생성자 주입
+	private BoardDAO boardDAO;
+	
+	@GetMapping("/write")
+	public String writeForm() {
+		return "board/write";
+	}
+	
+	@PostMapping("/write")
+	public String write(BoardDTO boardDTO) {
+		log.info("boardDTO=" + boardDTO);
+		return "redirect:/";
+	}
+}

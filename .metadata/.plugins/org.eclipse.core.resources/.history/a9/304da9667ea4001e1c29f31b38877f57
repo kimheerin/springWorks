@@ -1,0 +1,17 @@
+package org.khit.myapp.unittest;
+
+import org.junit.Test;
+import org.khit.myapp.sample.Company;
+
+import lombok.extern.log4j.Log4j;
+
+@Log4j
+public class BeanTest {
+	
+	private Company company;	//new 하여 사용
+	
+	@Test
+	public void beanTest() {
+		
+	}
+}
