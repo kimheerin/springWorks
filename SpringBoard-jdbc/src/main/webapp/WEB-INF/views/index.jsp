@@ -11,10 +11,13 @@
    <div id="content">
       <h2>KHit Home</h2>
       <div class=main-pic>
-         <img src="/resources/images/순정명수.png" alt="순정명수">   
+         <img src="/resources/images/snow.jpg" alt="눈사람">   
       </div>
       <div class="menu">
-      	<a href="/board/write">글쓰기</a>
+      	<!-- <a href="/board/write">글쓰기</a>&nbsp;&nbsp;&nbsp; -->
+      	<a href="/board/list">글목록</a>&nbsp;&nbsp;&nbsp;
+      	<a href="/user/join">회원가입</a>&nbsp;&nbsp;&nbsp;
+      	<a href="/user/login">로그인</a>&nbsp;&nbsp;&nbsp;
       </div>
    </div>
 </body>

@@ -1,0 +1,5 @@
+package org.khit.myapp.service;
+
+public class BoardService {
+
+}

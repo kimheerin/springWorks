@@ -1,8 +1,0 @@
-@charset "UTF-8";
-
-#content{width:1000px; margin:0 auto;}
-h2{color:grey; text-align:center;}
-.main-pic{text-align:center;}
-.menu{text-align: center; margin: 10px;}
-a{color: lightgrey;}
-tr{text-align: center;}

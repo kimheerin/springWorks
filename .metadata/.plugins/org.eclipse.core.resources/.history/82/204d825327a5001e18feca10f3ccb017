@@ -1,0 +1,43 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>글 상세보기</title>
+<link rel="stylesheet" href="/resources/css/style.css">
+</head>
+<body>
+   <div id="content">
+      <h2>글 상세보기</h2>
+      <table>
+      	<tr>
+      		<td>
+      			<label></label>
+      			<input type="text" name="boardTitle" value="${board.boardTitle}"
+      			placeholder="글제목" readonly>
+      		</td>
+      	</tr>
+      	<tr>
+      		<td>
+      			<label></label>
+      			<input type="text" name="boardWriter" value="${board.boardWriter}"
+      			placeholder="작성자" readonly>
+      		</td>
+      	</tr>
+      	<tr>
+      		<td>
+      			<label></label>
+      			<textarea rows="5" cols="50" name="boardContent"
+      			placeholder="글내용" readonly>${boardContent}</textarea>
+      		</td>
+      	</tr>
+      	<tr>
+      		<td>
+      			<a href="/board/list"><button>목록</button></a>
+      		</td>
+      	</tr>
+      </table>
+   </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+package org.khit.myapp.repository;
+
+import org.khit.myapp.dto.UserDTO;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class UserRepository {
+
+	public static void save(UserDTO userDTO) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,10 @@
+package org.khit.myapp.dto;
+
+public class UserDTO {
+	//ÇÊµå
+	private Long id;
+	private String userId;
+	private String userPasswd;
+	private String userName;
+	private Integer UserAge;
+}

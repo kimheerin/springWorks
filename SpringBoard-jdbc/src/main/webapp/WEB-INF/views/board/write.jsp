@@ -14,20 +14,20 @@
       <table>
       	<tr>
       		<td>
-      			<label>글제목</label>
-      			<input type="text" name="boardTitle">
+      			<label></label>
+      			<input type="text" name="boardTitle" placeholder="글제목">
       		</td>
       	</tr>
       	<tr>
       		<td>
-      			<label>작성자</label>
-      			<input type="text" name="boardWriter">
+      			<label></label>
+      			<input type="text" name="boardWriter" value="${sessionId}">
       		</td>
       	</tr>
       	<tr>
       		<td>
-      			<label>글내용</label>
-      			<textarea rows="5" cols="50" name="boardContent"></textarea>
+      			<label></label>
+      			<textarea rows="5" cols="50" name="boardContent" placeholder="글내용"></textarea>
       		</td>
       	</tr>
       	<tr>

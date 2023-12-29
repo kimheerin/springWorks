@@ -1,0 +1,35 @@
+package org.khit.myapp.controller;
+
+import org.khit.myapp.dto.BoardDTO;
+import org.khit.myapp.repository.BoardRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+@AllArgsConstructor	//매개변수가 있는 생성자
+@Slf4j
+@RequestMapping("/board")
+@Controller	//bean 객체로 등록
+public class BoardController {
+	
+	//생성자 주입 new
+	@Autowired
+	private BoardRepository boardRepository;
+	
+	@GetMapping("/write")
+	public String writeForm() {
+		return "board/write";	// /board/write.jsp
+	}
+	
+	@PostMapping("/write")
+	public String write(BoardDTO boardDTO) {
+		log.info("boardDTO=" + boardDTO);
+		boardRepository.save(boardDTO);
+		return "redirect:/";	//response.sendRedirect()
+	}
+}
