@@ -4,22 +4,25 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>khit home</title>
+<title>khit 메인...</title>
 </head>
 <body>
-	<h2>${sessionId}님 환영합니다.</h2>
+	<h1>${sessionId}님 환영합니다.</h1>
 	<h3>
-		<button onclick="update()">회원 정보 수정</button>
+		<button onclick="update()">회원정보 수정</button>
 		<button onclick="logout()">로그아웃</button>
+		<a href="/"><button>Home</button></a> 
 	</h3>
+	
 	<script>
-	      const logout = () => {
-	         location.href = "/user/logout";
-	      }
-	      
-	      const update = () => {
-	         location.href = "/user/update";
-	      }
+		const logout = () => {
+			location.href = "/user/logout";
+		}
+		
+		const update = () => {
+			location.href = "/user/update";
+		}
+	
 	</script>
 </body>
 </html>

@@ -1,6 +1,0 @@
-@charset "UTF-8";
-
-
-#content{width:1000px; margin:0 auto;}
-h2{color:green; text-align:center;}
-.main-pic{text-align:center;}

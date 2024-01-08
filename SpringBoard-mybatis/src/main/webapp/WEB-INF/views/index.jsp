@@ -4,16 +4,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>khit Home</title>
+<title>khit 홈...</title>
 </head>
 <body>
-   <h1>khit Home</h1>
-   <h3><a href="/user/join">회원가입</a>&nbsp;&nbsp;&nbsp;
-      <a href="/user/">회원목록</a>&nbsp;&nbsp;&nbsp;
-      <a href="/user/login">로그인</a>&nbsp;&nbsp;&nbsp;
-      <a href="/board/write">글쓰기</a>&nbsp;&nbsp;&nbsp;
-      <a href="/board/">글목록</a>&nbsp;&nbsp;&nbsp;
-		      
-      </h3>
+	<jsp:include page="layout/header.jsp" />
+    <div id="container">
+      <section id="main">
+		<h1>khit 홈입니다.</h1>
+		<div class="main_img">
+			<img src="/resources/images/bear.jpg" alt="곰인형">
+		</div>
+	  </section>
+	</div>
+	<jsp:include page="layout/footer.jsp" />
 </body>
 </html>

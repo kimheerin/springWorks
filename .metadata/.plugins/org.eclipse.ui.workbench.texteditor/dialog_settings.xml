@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="write"/>
+		<item key="selection" value="file"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="file"/>
+			<item value="jdbc"/>
+			<item value="//"/>
+			<item value="sprin"/>
+			<item value="com.mysql"/>
+			<item value="한글"/>
+			<item value="utf-8"/>
+			<item value="utf"/>
+			<item value="lombok"/>
 			<item value="write"/>
 			<item value="wrtie"/>
 			<item value="tite"/>
-			<item value="lombok"/>
 			<item value="&lt;!-- TEST"/>
 			<item value="&lt;!-- TEST\"/>
 		</list>
 		<list key="replacehistory">
+			<item value="\\"/>
 			<item value="title"/>
 		</list>
 	</section>

@@ -1,5 +1,0 @@
-package org.khit.myapp.repository;
-
-public class JDBCUtil {
-
-}
