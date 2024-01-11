@@ -70,7 +70,11 @@
 				</tr>
 			</tbody>
 		  </table>
-		  <!-- 댓글 목록 -->
+		  
+		  <div id="reply-list">
+		  	<!-- 댓글 목록 -->
+		  	
+		  </div>
 		  <c:forEach items="${replyList}" var="reply">
 			  <div class="reply">
 			  	<p>${reply.replyContent}</p>
@@ -96,20 +100,17 @@
 		  <c:choose>
 		  	<c:when test="${not empty sessionId}">
 		  <!-- 댓글 등록 -->
-			  <form action="/reply/insert" method="post"
-			    	id="replyform" name="replyform">
-			    <input type="hidden" name="boardId" value="${board.id}">
-			  	<p>
-			  		<input type="text" name="replyer" value="${sessionId}">
-		  		</p> 
-			  	<p>
-			  		<textarea rows="3" cols="50" name="replyContent" id="replyContent"
-			  		placeholder="댓글을 남겨주세요."></textarea>
-				</p>
-			    <button type="button" value="등록" onclick="checkReply()">등록</button>
-			  </form>
-		  	</c:when>
-		  <c:otherwise>
+             <input type="hidden" name="boardId" id="boardId" value="${board.id}">
+              <p>
+              	<input type="text" name="replyer" id="replyer" value="${sessionId}">
+              </p> 
+              <p>
+                <textarea rows="3" cols="50" name="replyContent"
+                    id="replyContent" placeholder="댓글을 남겨주세요"></textarea>
+              </p>
+             <button type="button" onclick="replyInsert()">등록</button>
+           </c:when>
+          <c:otherwise>
 		 <!-- 댓글 등록 로그인 이동 -->
 			 <div class="replyLogin">
 			 	<a href="/user/Login">
@@ -122,20 +123,46 @@
 	</div>
 	<jsp:include page="../layout/footer.jsp" />
 <script>
-	const checkReply = () => {
-    //alert("댓글 등록");
-    //댓글 등록이 비어있으면 "댓글을 입력해 주세요."
-    //아니면 댓글내용이서버에 전송 
-    let content = document.getElementById("replyContent");
-    
-	    if(content.value == ""){
-	       alert("댓글을 입력해 주세요.");
-	       content.focus();
-	       return false;         
-	    }else{
-	       document.replyform.submit();      
-	    }
-	}
+    const replyInsert = () => {
+        let boardId = "${board.id}"; // 또는 서버 사이드 템플릿 언어에 맞게 수정
+        let replyer = document.getElementById("replyer").value;
+        let content = document.getElementById("replyContent").value;
+
+        if (content == "") {
+            alert("댓글을 입력해 주세요.");
+            document.getElementById("replyContent").focus();
+            return false;         
+        }
+        
+        // Ajax 구현
+        $.ajax({
+            type: "POST",
+            url: "/reply/insert",
+            data: {
+                boardId: boardId,
+                replyer: replyer,
+                replyContent: content,
+            },
+            success: function(replyList){
+                console.log("등록 성공");
+                console.log(replyList);
+                // 댓글 목록
+                let output = "";
+                for(let i in replyList) {
+               	  output += "<div class='reply'>";
+                  output += "<p>" + replyList[i].replyContent + "</p>"
+                  output += "<p>작성자 " + replyList[i].replyer + ""
+                  output += "(작성일 " + replyList[i].createdTime + ")</p>"
+                  	output += "</div>";
+                }
+                document.getElementById("reply-list").innerHTML = output;
+                document.getElementById("replyContent").value = "";	//댓글 내용 초기화
+            },
+            error: function(){
+                console.log("등록 실패: " + error);
+            }
+        });
+    }
 </script>
 </body>
 </html>

@@ -8,14 +8,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Builder
-@NoArgsConstructor		//기본 생성자
-@AllArgsConstructor		//파라미터가 있는 생성자
-@Data	//Getter, Setter, ToString
+@NoArgsConstructor    //기본 생성자
+@AllArgsConstructor   //파라미터가 있는 생성자
+@Data   //Getter, Setter, ToString
 public class TodoDTO {
 	//필드
 	private Long tno;
 	private String title;
 	private String writer;
 	private Timestamp createdDate;
-	
 }

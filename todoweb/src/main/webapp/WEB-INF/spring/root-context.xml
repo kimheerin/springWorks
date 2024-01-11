@@ -19,8 +19,8 @@
 	<!-- mybatis 주요 객체 생성 -->
 	<bean id="sqlSessionFactory" 
 	      class="org.mybatis.spring.SqlSessionFactoryBean">
-	      <!-- Setter 주입 : dataSource: setDataSource() -->
-		<property name="dataSource" ref="dataSource" />
+	<!-- Setter 주입 : dataSource: setDataSource() -->
+	<property name="dataSource" ref="dataSource" />
 	</bean>
 	
 	<bean id="sqlSession"
@@ -30,8 +30,7 @@
 	</bean>
 	
 	<!-- mybatis 인터페이스 스캔 : 객체 생성 -->
-	<mybatis-spring:scan base-package="com.khit.todoweb.mapper" />
-	<context:component-scan base-package="com.khit.todoweb.service" />
+	<mybatis-spring:scan base-package="com.khit.todoweb.mapper"/>
+	<context:component-scan base-package="com.khit.todoweb.service" />	
 	<context:component-scan base-package="com.khit.todoweb.config" />
-	
 </beans>

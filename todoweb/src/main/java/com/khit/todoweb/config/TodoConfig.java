@@ -4,7 +4,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-//설정 파일을 만들어 주는 이노테이션
+//설정 파일로 만들어주는 어노테이션
 @Configuration
 public class TodoConfig {
 
