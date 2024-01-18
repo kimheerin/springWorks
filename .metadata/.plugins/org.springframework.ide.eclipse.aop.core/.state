@@ -3,6 +3,7 @@
 <aop-project name="jwspring2"/>
 <aop-project name="todoweb"/>
 <aop-project name="SpringBoard-mybatis"/>
+<aop-project name="BoardWeb"/>
 <aop-project name="members"/>
 <aop-project name="SpringBoard-jdbc"/>
 </aop-reference-model>
